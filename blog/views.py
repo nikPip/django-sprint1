@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 
 posts = [
     {
@@ -43,6 +43,7 @@ posts = [
     },
 ]
 
+
 def index(request):
     context = {
         'posts': posts
@@ -56,9 +57,9 @@ def post_detail(request, id):
     }
     return render(request, 'detail.html', context)
 
+
 def category_posts(request, category_slug):
     context = {
         'category_slug': category_slug
     }
     return render(request, 'category.html', context)
-    
