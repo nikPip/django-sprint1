@@ -1,3 +1,4 @@
+from django.http import Http404
 from django.shortcuts import render
 
 posts = [
@@ -53,7 +54,10 @@ def index(request):
 
 
 def post_detail(request, id):
-    post = posts[id]
+    try:
+        post = posts[id]
+    except IndexError:
+        raise Http404("Пост не найден")
     context = {
         'post': post,
     }
