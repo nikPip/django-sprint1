@@ -57,7 +57,7 @@ def post_detail(request, id):
     try:
         post = posts[id]
     except IndexError:
-        raise Http404("Пост не найден")
+        raise Http404('Пост не найден')
     context = {
         'post': post,
     }
