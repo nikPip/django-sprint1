@@ -65,15 +65,7 @@ def post_detail(request, id):
 
 
 def category_posts(request, category_slug):
-<<<<<<< HEAD
     context = {
         'category_slug': category_slug,
-=======
-    category_posts = [
-        post for post in posts if post['category'] == category_slug]
-    context = {
-        'category_slug': category_slug,
-        'posts': category_posts,
->>>>>>> 7074e19fc162d03fa80649bdb0cebb5562e55280
     }
     return render(request, 'blog/category.html', context)
