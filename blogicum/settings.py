@@ -8,7 +8,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-TEMPLATES_DIR = BASE_DIR / 'html'
+TEMPLATES_DIR = BASE_DIR / 'templates'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -88,7 +88,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'html',
+    BASE_DIR / 'templates',
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
